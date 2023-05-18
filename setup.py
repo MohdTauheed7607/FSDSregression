@@ -6,7 +6,7 @@ HYPEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
     requirements=[]
     with open(file_path) as file_obj:
-        requirements=file_obj.readline()
+        requirements=file_obj.readlines()
         requirements=[req.replace("\n","") for req in requirements]
 
         if HYPEN_E_DOT in requirements:
@@ -14,10 +14,12 @@ def get_requirements(file_path:str)->List[str]:
 
     return requirements
 
+
 setup(
     name='RegressorProject',
     version='0.0.1',
     author='Tauheed',
     author_email='motauheed9452@gmail.com',
     install_requires=get_requirements('requirements.txt'),
-    packages=find_packages())
+    packages=find_packages()
+)

@@ -1,6 +1,8 @@
 numpy
 pandas
 Flask
-# -e .
+-e .
 seaborn
 matplotlib
+scikit-learn
+dataclasses
