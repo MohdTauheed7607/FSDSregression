@@ -41,6 +41,12 @@ class DataIngestion:
             train_set,test_set=train_test_split(df,test_size=0.30,random_state=42)
 
             logging.info('Data has been splitted')
+
+            logging.info('dropping x and y columns from train and test sets')
+            train_set=train_set.drop(columns=['x','y'],axis=1)
+
+            test_set=test_set.drop(columns=['x','y'],axis=1)
+
             logging.info('Storing the train and test data into train and test directory respctively')
 
             train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True)

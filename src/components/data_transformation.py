@@ -30,7 +30,7 @@ class DataTransformation:
             # defining categorical and numerical columns
 
             categorical_cols=['cut','color','clarity']
-            numerical_cols=['carat','depth','table','x','y','z']
+            numerical_cols=['carat','depth','table','z']
 
             # defining cat_categories ranking
 
@@ -44,7 +44,7 @@ class DataTransformation:
 
             num_pipeline=Pipeline(
                 steps=[
-                ('imputer',SimpleImputer(strategy='median')),
+                ('imputer',SimpleImputer(strategy='mean')),
                 ('scaler',StandardScaler())
                 ]
             )

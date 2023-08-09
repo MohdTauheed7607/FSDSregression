@@ -59,8 +59,6 @@ class CustomData:
                  carat:float,
                  depth:float,
                  table:float,
-                 x:float,
-                 y:float,
                  z:float,
                  cut:str,
                  color:str,
@@ -69,8 +67,6 @@ class CustomData:
         self.carat=carat
         self.depth=depth
         self.table=table
-        self.x=x
-        self.y=y
         self.z=z
         self.cut=cut
         self.color=color
@@ -82,9 +78,7 @@ class CustomData:
                     'carat':[self.carat],
                     'depth':[self.depth],
                     'table':[self.table],
-                    'x':[self.x],
-                    'y':[self.y],
-                    'z':[self.y],
+                    'z':[self.z],
                     'cut':[self.cut],
                     'color':[self.color],
                     'clarity':[self.clarity]
